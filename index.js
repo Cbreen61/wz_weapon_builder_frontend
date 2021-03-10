@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded',() => {
+    createForm();
     fetchGames();
 })
 
@@ -16,4 +17,19 @@ function fetchGames(){
         }
     })
 
+}
+
+//create new game 
+function createForm(){
+    let gamesForm = document.getElementById("games-form")
+
+    gamesForm.innerHTML +=
+`
+    <form>
+        <label> Name:</label><input type="text" id = "name"><br>
+        <label> Publisher:</label><input type="text" id = "publisher"><br>
+        <label> Image:</label><input type="text" id = "image"><br>
+        <input type="submit" vaule="Add Game">
+    </form>
+`
 }
