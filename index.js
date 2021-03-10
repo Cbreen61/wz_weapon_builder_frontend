@@ -12,7 +12,7 @@ function fetchGames(){
         for (const game of games){
             console.log(game)
             let g = new Game(game.id, game.name, game.publisher, game.image)
-            console.log(g)
+            g.renderGame();
         }
     })
 
