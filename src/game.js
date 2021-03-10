@@ -16,8 +16,7 @@ class Game{
         <p><img src="${this.image}"></p>
         </ul>
         
-        `
-       
+        `   
         
     }
 }

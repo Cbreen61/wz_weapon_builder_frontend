@@ -40,5 +40,21 @@ function gamesFormSubmission(){
     let name = document.getElementById("name").value
     let publisher = document.getElementById("publisher").value
     let image = document.getElementById("image").value
-    console.log(name,publisher,image)
+    
+    let game = {
+        name: name,
+        publisher: publisher,
+        image: image
+    }
+
+    fetch(`${BASE_URL}/games`, {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify(game)
+    })
+    .then(resp => resp.json())
+    .then(game => {
+        let g = new Game(game.id, game.name, game.publisher, game.image)
+            g.renderGame();
+})
 }
