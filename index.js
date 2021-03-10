@@ -11,7 +11,6 @@ function fetchGames(){
     .then(resp => resp.json())
     .then(games =>{
         for (const game of games){
-            console.log(game)
             let g = new Game(game.id, game.name, game.publisher, game.image)
             g.renderGame();
         }
@@ -56,5 +55,17 @@ function gamesFormSubmission(){
     .then(game => {
         let g = new Game(game.id, game.name, game.publisher, game.image)
             g.renderGame();
-})
+    })
+}
+
+function deleteGame(){
+
+    let gameId = parseInt(event.target.dataset.id)
+
+    fetch(`${BASE_URL}/games/${gameId}`, {
+        method: 'DELETE'
+    })
+    
+globalThis.location.reload();
+
 }

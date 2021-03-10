@@ -15,6 +15,7 @@ class Game{
         <h4 style="text-align:center"> Publisher: ${this.publisher} </h4>
         <p><img src="${this.image}"></p>
         </ul>
+        <button class="delete-bttn" data-id=${this.id} onclick="deleteGame()">Delete Game</button>
         
         `   
         
