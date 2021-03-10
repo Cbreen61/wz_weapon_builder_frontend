@@ -24,12 +24,21 @@ function createForm(){
     let gamesForm = document.getElementById("games-form")
 
     gamesForm.innerHTML +=
-`
+    `
     <form>
         <label> Name:</label><input type="text" id = "name"><br>
         <label> Publisher:</label><input type="text" id = "publisher"><br>
         <label> Image:</label><input type="text" id = "image"><br>
-        <input type="submit" vaule="Add Game">
+        <input type="submit" value="Add Game">
     </form>
-`
+    `
+    gamesForm.addEventListener("submit", gamesFormSubmission)
+}
+
+function gamesFormSubmission(){
+    event.preventDefault();
+    let name = document.getElementById("name").value
+    let publisher = document.getElementById("publisher").value
+    let image = document.getElementById("image").value
+    console.log(name,publisher,image)
 }
