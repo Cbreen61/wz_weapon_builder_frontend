@@ -65,7 +65,6 @@ function deleteGame(){
     fetch(`${BASE_URL}/games/${gameId}`, {
         method: 'DELETE'
     })
-    
 globalThis.location.reload();
 
 }

@@ -11,11 +11,11 @@ class Game{
         gamesDiv.innerHTML +=
         `
         <ul>
-        <h2 style="text-align:center"> Name: ${this.name} </h2>
-        <h4 style="text-align:center"> Publisher: ${this.publisher} </h4>
+        <h2> Name: ${this.name} </h2>
+        <h4> Publisher: ${this.publisher} </h4>
         <p><img src="${this.image}"></p>
         </ul>
-        <button class="delete-bttn" data-id=${this.id} onclick="deleteGame()">Delete Game</button>
+        <button class="delete-bttn" data-id=${this.id} onclick="deleteGame()>Delete Game</button>
         
         `   
         
